@@ -72,7 +72,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border/50 mt-8 pt-8 text-center text-muted-foreground text-sm">
-          <p>&copy; {new Date().getFullYear()} BelleClinic. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Webora. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
