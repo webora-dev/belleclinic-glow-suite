@@ -30,13 +30,13 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-background via-secondary/30 to-background overflow-hidden">
+    <section id="services" className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-white via-secondary/20 to-white overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
-            Nossos <span className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--gold-light))] bg-clip-text text-transparent drop-shadow-[0_0_30px_hsl(var(--gold)/0.2)]">Serviços</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight text-foreground">
+            Nossos <span className="bg-gradient-to-r from-[hsl(var(--rose))] to-[hsl(var(--rose-light))] bg-clip-text text-transparent">Serviços</span>
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground font-light">
             Tratamentos estéticos modernos e personalizados para realçar sua beleza natural
           </p>
         </div>
@@ -45,27 +45,27 @@ const Services = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group hover:shadow-[0_10px_40px_-10px_hsl(var(--gold)/0.4)] transition-all duration-300 border-border/30 hover:border-primary/30 overflow-hidden bg-card/50 backdrop-blur-sm"
+              className="group hover:shadow-[0_10px_40px_-10px_hsl(var(--rose)/0.3)] transition-all duration-300 border-border hover:border-primary/40 overflow-hidden bg-card"
             >
-              <div className="relative h-48 sm:h-56 overflow-hidden">
+              <div className="relative h-48 sm:h-56 overflow-hidden rounded-t-lg">
                 <img
                   src={service.image}
-                  alt={`${service.title} - Tratamento estético profissional BelleClinic`}
-                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                  alt={`${service.title} - Tratamento estético profissional premium BelleClinic São Paulo`}
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              <CardHeader>
+              <CardHeader className="pb-3">
                 <CardTitle className="text-lg sm:text-xl group-hover:text-primary transition-colors">
                   {service.title}
                 </CardTitle>
-                <CardDescription className="text-sm sm:text-base text-muted-foreground">
+                <CardDescription className="text-sm sm:text-base text-muted-foreground font-light">
                   {service.description}
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="outline" className="w-full group-hover:border-primary group-hover:text-primary group-hover:bg-primary/5 transition-all">
+                <Button variant="outline" className="w-full">
                   Agendar Agora
                 </Button>
               </CardContent>

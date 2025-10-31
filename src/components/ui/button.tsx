@@ -9,13 +9,13 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_4px_20px_-4px_hsl(var(--primary)/0.3)]",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-border bg-background/50 hover:bg-accent hover:text-accent-foreground backdrop-blur-sm",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_4px_20px_-4px_hsl(var(--primary)/0.3)] rounded-full",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-full",
+        outline: "border-2 border-primary bg-transparent hover:bg-primary hover:text-primary-foreground transition-all rounded-full",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-full",
+        ghost: "hover:bg-accent hover:text-accent-foreground rounded-full",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--gold-light))] text-[hsl(var(--dark-bg))] font-semibold hover:shadow-[0_10px_40px_-10px_hsl(var(--gold)/0.6)] hover:scale-[1.02] transition-all duration-300",
+        hero: "bg-gradient-to-r from-[hsl(var(--rose))] to-[hsl(var(--rose-light))] text-white font-semibold hover:shadow-[0_10px_40px_-10px_hsl(var(--rose)/0.5)] hover:scale-[1.02] transition-all duration-300 rounded-full",
       },
       size: {
         default: "h-10 px-4 py-2",

@@ -38,12 +38,12 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/98 backdrop-blur-md shadow-[0_4px_20px_-4px_hsl(var(--gold)/0.2)] border-b border-border/30" : "bg-background/30 backdrop-blur-sm"
+        isScrolled ? "bg-white/95 backdrop-blur-md shadow-[0_4px_20px_-4px_hsl(var(--rose)/0.15)] border-b border-border" : "bg-white/80 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          <Link to="/" className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--gold-light))] bg-clip-text text-transparent drop-shadow-[0_0_20px_hsl(var(--gold)/0.3)]" aria-label="BelleClinic - Página Inicial">
+          <Link to="/" className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[hsl(var(--rose))] to-[hsl(var(--rose-light))] bg-clip-text text-transparent" aria-label="BelleClinic - Página Inicial">
             BelleClinic
           </Link>
 
@@ -59,12 +59,12 @@ const Navbar = () => {
                     handleNavClick(link.path);
                   }
                 }}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium text-sm lg:text-base relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                className="text-foreground/70 hover:text-primary transition-colors duration-300 font-medium text-sm lg:text-base relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
               >
                 {link.name}
               </a>
             ))}
-            <Button variant="hero" size="default" className="shadow-[0_0_20px_hsl(var(--gold)/0.3)]">
+            <Button variant="hero" size="default">
               Agendar
             </Button>
           </div>
@@ -81,7 +81,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden pb-6 animate-in fade-in slide-in-from-top-4 duration-300 border-t border-border/20 mt-2 pt-4">
+          <div className="md:hidden pb-6 animate-in fade-in slide-in-from-top-4 duration-300 border-t border-border mt-2 pt-4 bg-white/95">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
@@ -95,12 +95,12 @@ const Navbar = () => {
                       setIsOpen(false);
                     }
                   }}
-                  className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium py-2 px-4 rounded-md hover:bg-primary/5"
+                  className="text-foreground/70 hover:text-primary transition-colors duration-300 font-medium py-2 px-4 rounded-full hover:bg-primary/5"
                 >
                   {link.name}
                 </a>
               ))}
-              <Button variant="hero" size="default" className="w-full shadow-[0_0_20px_hsl(var(--gold)/0.3)]">
+              <Button variant="hero" size="default" className="w-full">
                 Agendar
               </Button>
             </div>
