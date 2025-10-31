@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'playfair': ['Playfair Display', 'serif'],
+        'sans': ['Playfair Display', 'ui-sans-serif', 'system-ui'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

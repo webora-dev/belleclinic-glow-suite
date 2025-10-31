@@ -8,80 +8,84 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 40 20% 20%;
+    /* Webora Dark Elegant Theme */
+    --background: 220 20% 8%;
+    --foreground: 40 10% 92%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 40 20% 20%;
+    --card: 220 18% 12%;
+    --card-foreground: 40 10% 92%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 40 20% 20%;
+    --popover: 220 18% 12%;
+    --popover-foreground: 40 10% 92%;
 
-    --primary: 45 70% 52%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 42 88% 65%;
+    --primary-foreground: 220 20% 8%;
 
-    --secondary: 40 30% 95%;
-    --secondary-foreground: 40 20% 20%;
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 40 10% 92%;
 
-    --muted: 40 20% 85%;
-    --muted-foreground: 40 10% 50%;
+    --muted: 220 15% 20%;
+    --muted-foreground: 40 8% 65%;
 
-    --accent: 45 70% 65%;
-    --accent-foreground: 40 20% 20%;
+    --accent: 42 88% 70%;
+    --accent-foreground: 220 20% 8%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 40 20% 90%;
-    --input: 40 20% 90%;
-    --ring: 45 70% 52%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 42 88% 65%;
 
     --radius: 0.75rem;
 
-    /* Custom BelleClinic tokens */
-    --gold: 45 70% 52%;
-    --gold-light: 45 70% 65%;
-    --gold-dark: 45 70% 40%;
-    --beige: 40 30% 95%;
-    --beige-dark: 40 20% 85%;
+    /* Custom Webora tokens */
+    --gold: 42 88% 65%;
+    --gold-light: 42 88% 75%;
+    --gold-dark: 42 88% 55%;
+    --dark-bg: 220 20% 8%;
+    --dark-card: 220 18% 12%;
+    --dark-accent: 220 15% 18%;
     
-    --gradient-gold: linear-gradient(135deg, hsl(45 70% 52%) 0%, hsl(45 70% 65%) 100%);
-    --gradient-beige: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 30% 95%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(42 88% 65%) 0%, hsl(42 88% 75%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(220 20% 8%) 0%, hsl(220 18% 12%) 100%);
+    --gradient-subtle: linear-gradient(135deg, hsl(220 18% 12%) 0%, hsl(220 15% 18%) 100%);
     
-    --shadow-elegant: 0 10px 40px -10px hsl(45 70% 52% / 0.2);
-    --shadow-soft: 0 4px 20px -4px hsl(40 20% 20% / 0.1);
+    --shadow-elegant: 0 10px 40px -10px hsl(42 88% 65% / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 60px hsl(42 88% 65% / 0.15);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 40 20% 10%;
-    --foreground: 40 30% 95%;
+    --background: 220 20% 8%;
+    --foreground: 40 10% 92%;
 
-    --card: 40 20% 12%;
-    --card-foreground: 40 30% 95%;
+    --card: 220 18% 12%;
+    --card-foreground: 40 10% 92%;
 
-    --popover: 40 20% 12%;
-    --popover-foreground: 40 30% 95%;
+    --popover: 220 18% 12%;
+    --popover-foreground: 40 10% 92%;
 
-    --primary: 45 70% 52%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 42 88% 65%;
+    --primary-foreground: 220 20% 8%;
 
-    --secondary: 40 20% 20%;
-    --secondary-foreground: 40 30% 95%;
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 40 10% 92%;
 
-    --muted: 40 20% 20%;
-    --muted-foreground: 40 10% 60%;
+    --muted: 220 15% 20%;
+    --muted-foreground: 40 8% 65%;
 
-    --accent: 45 70% 65%;
-    --accent-foreground: 40 20% 20%;
+    --accent: 42 88% 70%;
+    --accent-foreground: 220 20% 8%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 40 30% 95%;
+    --destructive-foreground: 40 10% 92%;
 
-    --border: 40 20% 20%;
-    --input: 40 20% 20%;
-    --ring: 45 70% 52%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 42 88% 65%;
   }
 }
 
@@ -90,7 +94,19 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+    font-family: 'Playfair Display', serif;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }

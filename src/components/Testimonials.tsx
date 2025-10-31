@@ -35,45 +35,46 @@ const Testimonials = () => {
   const prev = () => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section id="testimonials" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+    <section id="testimonials" className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-background to-secondary/20 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
             O Que Dizem{" "}
-            <span className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--gold-light))] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--gold-light))] bg-clip-text text-transparent drop-shadow-[0_0_30px_hsl(var(--gold)/0.2)]">
               Nossas Clientes
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground">
             Depoimentos reais de quem confia na BelleClinic
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto relative">
-          <Card className="border-border/50 shadow-[0_10px_40px_-10px_hsl(var(--gold)/0.2)]">
-            <CardContent className="pt-12 pb-12 px-8 md:px-16">
+          <Card className="border-border/30 shadow-[0_10px_40px_-10px_hsl(var(--gold)/0.3)] bg-card/50 backdrop-blur-sm">
+            <CardContent className="pt-8 sm:pt-12 pb-8 sm:pb-12 px-6 sm:px-12 md:px-16">
               <div className="flex flex-col items-center text-center">
-                <div className="flex gap-1 mb-6">
+                <div className="flex gap-1 mb-4 sm:mb-6">
                   {Array.from({ length: testimonials[current].rating }).map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-[hsl(var(--gold))] text-[hsl(var(--gold))]" />
+                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-[hsl(var(--gold))] text-[hsl(var(--gold))]" />
                   ))}
                 </div>
-                <p className="text-lg md:text-xl text-foreground/90 mb-6 italic">
+                <p className="text-base sm:text-lg md:text-xl text-foreground/90 mb-4 sm:mb-6 italic leading-relaxed">
                   "{testimonials[current].text}"
                 </p>
-                <p className="font-semibold text-primary text-lg">
+                <p className="font-semibold text-primary text-base sm:text-lg">
                   {testimonials[current].name}
                 </p>
               </div>
             </CardContent>
           </Card>
 
-          <div className="flex justify-center gap-4 mt-8">
+          <div className="flex justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
             <Button
               variant="outline"
               size="icon"
               onClick={prev}
-              className="rounded-full hover:bg-primary hover:text-primary-foreground transition-all"
+              className="rounded-full hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all border-border/30 shadow-[0_0_20px_hsl(var(--gold)/0.15)]"
+              aria-label="Depoimento anterior"
             >
               <ChevronLeft className="w-4 h-4" />
             </Button>
@@ -82,10 +83,10 @@ const Testimonials = () => {
                 <button
                   key={index}
                   onClick={() => setCurrent(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === current ? "bg-primary w-8" : "bg-muted"
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    index === current ? "bg-primary w-8" : "bg-muted w-2"
                   }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
+                  aria-label={`Ir para depoimento ${index + 1}`}
                 />
               ))}
             </div>
@@ -93,7 +94,8 @@ const Testimonials = () => {
               variant="outline"
               size="icon"
               onClick={next}
-              className="rounded-full hover:bg-primary hover:text-primary-foreground transition-all"
+              className="rounded-full hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all border-border/30 shadow-[0_0_20px_hsl(var(--gold)/0.15)]"
+              aria-label="Próximo depoimento"
             >
               <ChevronRight className="w-4 h-4" />
             </Button>
